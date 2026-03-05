@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:3001",
+    origin:"https://codecatalyst-frontend.vercel.app",
     credentials:true
 }))
 
