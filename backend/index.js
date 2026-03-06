@@ -28,7 +28,10 @@ app.use(cors({
     credentials:true
 }))
 
-
+ app.use((req, res, next) => {
+	res.header('Access-Control-Allow-Origin', '*');
+ 	next();
+});
 //multipart/form-data [for both files and text fields]
 app.use(fileUpload({
     useTempFiles : true,
